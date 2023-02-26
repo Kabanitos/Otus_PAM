@@ -4,15 +4,15 @@
 * дать конкретному пользователю права работать с докером
 и возможность рестартить докер сервис
 # Настройка запрета для всех пользователей (кроме группы Admin) логина в выходные дни (Праздники не учитываются)
-Подключаемся к созданной VM: **vagrant ssh**
-Переходим в root-пользователя: **sudo -i**
+Подключаемся к созданной VM: **vagrant ssh**.
+Переходим в root-пользователя: **sudo -i**.
 Создаем пользователя otusadm и otus: **sudo useradd otusadm && sudo useradd otus**
 Задаем пользователям пароли: **echo "Otus2022!" | sudo passwd --stdin otusadm && echo "Otus2022!" | sudo passwd --stdin otus**
 Создаем группу admin: **sudo groupadd -f admin**
 Добавляем пользователя vagrant,otusadm и root в группу admin:
-    **sudo usermod otusadm -a -G admin**
-    **sudo usermod root -a -G admin**
-    **sudo usermod vagrant -a -G admin**
+   + **sudo usermod otusadm -a -G admin**
+   + **sudo usermod root -a -G admin**
+   + **sudo usermod vagrant -a -G admin**
 
     
     
